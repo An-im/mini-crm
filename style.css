@@ -11,30 +11,45 @@ form {
   max-width: 500px;
   margin: 0 auto 2rem;
   background: white;
-  padding: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
+
 input {
-  margin: 0.5rem 0;
-  padding: 0.5rem;
-  width: 100%;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  padding: 0.8rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #fafafa;
+  transition: border-color 0.2s ease;
+}
+
+input:focus {
+  outline: none;
+  border-color: #007BFF;
+  background-color: white;
 }
 button {
-  margin-top: 1rem;
-  padding: 0.5rem 1rem;
-  background: #007BFF;
+  padding: 0.8rem 1rem;
+  background-color: #007BFF;
   color: white;
   border: none;
-  border-radius: 4px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition: background-color 0.2s ease, transform 0.2s ease;
 }
+
 button:hover {
-  transform: scale(1.03);
+  background-color: #0056b3;
+  transform: translateY(-2px);
 }
+
 table {
   width: 100%;
   border-collapse: collapse;
