@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -9,24 +9,27 @@
 </head>
 <body>
   <h1>Mini CRM</h1>
+
   <form id="client-form">
-    <input type="text" id="name" placeholder="Nombre" required />
+    <input type="text" id="name" placeholder="Name" required />
     <input type="email" id="email" placeholder="Email" required />
-    <input type="text" id="company" placeholder="Empresa" required />
-    <button type="submit">Agregar Cliente</button>
+    <input type="text" id="company" placeholder="Company" required />
+    <button type="submit">Add Client</button>
   </form>
-  <input type="text" id="search" placeholder="Buscar por nombre, email o empresa..." />
+
+  <input type="text" id="search" placeholder="Search by name, email or company..." />
+
   <table id="client-table">
     <thead>
       <tr>
-        <th>Nombre</th>
+        <th>Name</th>
         <th>Email</th>
-        <th>Empresa</th>
-        <th>Acción</th>
+        <th>Company</th>
+        <th>Action</th>
       </tr>
     </thead>
     <tbody>
-      <!-- Clientes se agregan aquí dinámicamente -->
+      <!-- Clients will be dynamically added here -->
     </tbody>
   </table>
 

@@ -24,12 +24,11 @@ function renderClients(searchTerm = '') {
       <td>${client.name}</td>
       <td>${client.email}</td>
       <td>${client.company}</td>
-      <td><button class="delete-btn" onclick="deleteClient(${index})">Eliminar</button></td>
+      <td><button class="delete-btn" onclick="deleteClient(${index})">Delete</button></td>
     `;
     tableBody.appendChild(row);
   });
 }
-
 
 function deleteClient(index) {
   clients.splice(index, 1);
@@ -45,7 +44,7 @@ form.addEventListener('submit', function (e) {
 
   const exists = clients.some(c => c.email.toLowerCase() === email.toLowerCase());
   if (exists) {
-    alert("Este cliente ya fue agregado con ese email.");
+    alert("A client with this email already exists.");
     return;
   }
 
@@ -56,6 +55,7 @@ form.addEventListener('submit', function (e) {
     form.reset();
   }
 });
+
 const searchInput = document.getElementById('search');
 
 searchInput.addEventListener('input', function () {
@@ -63,5 +63,5 @@ searchInput.addEventListener('input', function () {
   renderClients(term);
 });
 
-
-renderClients(); // 👈 Esta línea es CLAVE para mostrar los datos al cargar
+// Show clients on page load
+renderClients();
