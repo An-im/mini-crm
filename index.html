@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mini CRM</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+</head>
+<body>
+  <h1>Mini CRM</h1>
+  <form id="client-form">
+    <input type="text" id="name" placeholder="Nombre" required />
+    <input type="email" id="email" placeholder="Email" required />
+    <input type="text" id="company" placeholder="Empresa" required />
+    <button type="submit">Agregar Cliente</button>
+  </form>
+  <input type="text" id="search" placeholder="Buscar por nombre, email o empresa..." />
+  <table id="client-table">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Email</th>
+        <th>Empresa</th>
+        <th>Acción</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Clientes se agregan aquí dinámicamente -->
+    </tbody>
+  </table>
+
+  <script src="script.js"></script>
+</body>
+</html>
